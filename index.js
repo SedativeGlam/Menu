@@ -114,40 +114,42 @@ const displayMenuItems = (items) => {
             <div class="dotted-line"></div>
             <p class="text">${item.text}</p>
           </div>`;
-          grid.appendChild(menuCont);
+    grid.appendChild(menuCont);
   });
 };
 
 //Display all menu
 const allBtn = document.querySelector(".all");
-allBtn.addEventListener("click", ()=>{
+allBtn.addEventListener("click", () => {
   displayMenuItems(menu);
 });
 
 //Display breakfast menu
 const breakfastBtn = document.querySelector(".breakfast");
-breakfastBtn.addEventListener("click", ()=>{
-  const breakfastFilter = menu.filter((breakfastItem) => breakfastItem.id === "breakfast");
+breakfastBtn.addEventListener("click", () => {
+  const breakfastFilter = menu.filter(
+    (breakfastItem) => breakfastItem.id === "breakfast"
+  );
   displayMenuItems(breakfastFilter);
 });
 
 //Display lunch menu
 const lunchBtn = document.querySelector(".lunch");
-lunchBtn.addEventListener("click", ()=>{
+lunchBtn.addEventListener("click", () => {
   const lunchFilter = menu.filter((lunchItem) => lunchItem.id === "lunch");
   displayMenuItems(lunchFilter);
 });
 
 //Display shakes menu
 const shakesBtn = document.querySelector(".shakes");
-shakesBtn.addEventListener("click", ()=>{
+shakesBtn.addEventListener("click", () => {
   const shakesFilter = menu.filter((shakesItem) => shakesItem.id === "shakes");
   displayMenuItems(shakesFilter);
 });
 
 //Display dinner menu
 const dinnerBtn = document.querySelector(".dinner");
-dinnerBtn.addEventListener("click", ()=>{
+dinnerBtn.addEventListener("click", () => {
   const dinnerFilter = menu.filter((dinnerItem) => dinnerItem.id === "dinner");
   displayMenuItems(dinnerFilter);
 });
